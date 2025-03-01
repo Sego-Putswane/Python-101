@@ -9,6 +9,11 @@ def get_user_info():
         "favorite_color": <user's favorite color>
     }
     """
+    user_details= {
+            "name": input("Enter your name: "),
+            "age": int(input("Enter your age: ")),
+            "favorite color": input("Enter your favorite color: ")}
+    return user_details
     pass
 
 # Task 2
@@ -18,6 +23,8 @@ def calculate_bmi(weight, height):
     BMI = weight (kg) / (height (m) ** 2)
     Return the BMI rounded to 2 decimal places.
     """
+    BMI = weight  / (height ** 2)
+    return round (BMI, 2)
     pass
 
 # Task 3
@@ -29,7 +36,10 @@ def create_shopping_list(items):
     Input: ["apple", "banana", "apple"]
     Output: {"apple": 2, "banana": 1}
     """
-    pass
+    
+    # shopping_list= []
+    # Dic_shopping_list ={}
+    # pass
 
 # Task 4
 def count_word_frequency(text):
@@ -50,6 +60,13 @@ def check_number(num):
     - "Negative" if the number is less than 0.
     - "Zero" if the number is 0.
     """
+    if num > 0:
+        return "Positive"
+    if num < 0:
+        return "Negative"
+    if num == 0:
+        return "Zero"
+    return num
     pass
 
 # Task 6
@@ -57,6 +74,11 @@ def sum_even_numbers(numbers):
     """
     Given a list of numbers, return the sum of all even numbers.
     """
+    count= 0
+    for num in numbers:
+        if num % 2 == 0:
+            count += num
+    return count
     pass
 
 # Task 7
@@ -65,6 +87,7 @@ def find_first_negative(numbers):
     Given a list of numbers, use a while loop to find the first negative number.
     Return the first negative number or None if there are no negative numbers.
     """
+    
     pass
 
 # Task 8
