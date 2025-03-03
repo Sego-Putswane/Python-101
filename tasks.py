@@ -37,8 +37,21 @@ def create_shopping_list(items):
     Output: {"apple": 2, "banana": 1}
     """
     
-    # shopping_list= []
-    # Dic_shopping_list ={}
+    Dic_shopping_list ={}
+    for item in items:
+        if not isinstance(item, str):
+            return TypeError(f"{item} is not a string")
+        if item in Dic_shopping_list:
+            Dic_shopping_list[item] += 1
+        else:
+            Dic_shopping_list[item] = 1
+    return Dic_shopping_list
+# items= ["apple", "banana", "apple", "apple", "orange", "banana"]
+# shopping_list= create_shopping_list(items)
+# print(shopping_list)
+            
+            
+    
     # pass
 
 # Task 4
@@ -50,7 +63,21 @@ def count_word_frequency(text):
     Input: "hello world hello"
     Output: {"hello": 2, "world": 1}
     """
-    pass
+    word_frequency= {}
+    words= text.split()
+    for word in words:
+        if not isinstance(word, str):
+            raise ValueError(f"{word} is not a string")
+        if word in word_frequency:
+            word_frequency[word] += 1
+        else:
+            word_frequency[word] = 1
+    return word_frequency
+# text= "hello world hello"
+# frequency= count_word_frequency(text)
+# print(frequency)
+    
+    # pass
 
 # Task 5
 def check_number(num):
