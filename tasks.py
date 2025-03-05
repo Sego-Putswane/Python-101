@@ -114,7 +114,12 @@ def find_first_negative(numbers):
     Given a list of numbers, use a while loop to find the first negative number.
     Return the first negative number or None if there are no negative numbers.
     """
-    
+    index= 0
+    while index < len(numbers):
+        if numbers[index] <0:
+            return numbers[index]
+        index += 1
+    return None
     pass
 
 # Task 8
@@ -128,4 +133,22 @@ def analyze_text(text):
     Input: "Hello world"
     Output: {"word_count": 2, "vowel_count": 3}
     """
-    pass
+
+
+    vowels= ["a", "e", "i", "o", "u"]
+    word_count= 0
+    vowels_count= 0
+
+    words= text.split()
+
+    word_count= len(words)
+
+    for char in text.lower():
+        if char in vowels:
+            vowels_count += 1
+    return{"word_count": word_count, "vowels_count":vowels_count}
+# results= analyze_text("hello world")
+# print(results)
+    
+
+
