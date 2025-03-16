@@ -37,14 +37,13 @@ def create_shopping_list(items):
     Input: ["apple", "banana", "apple"]
     Output: {"apple": 2, "banana": 1}
     """
+    
     shopping_list = {}
     for item in items:
-        if item not in shopping_list:
-            quantity = int(input(f"How many {item}s would you like : "))
-            shopping_list[item] = quantity
+        if item in shopping_list:
+            shopping_list[item] += 1
         else:
-            return 
-
+            shopping_list[item] = 1
     return shopping_list
 
 # Task 4
