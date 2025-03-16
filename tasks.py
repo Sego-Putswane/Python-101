@@ -132,4 +132,6 @@ def analyze_text(text):
         if item in ["a","A","e","E","i","I","o","O","u","U"]:
             vowel += 1
     
-    return {"split_words": len(split_words), "vowel": vowel}
+    return {"word_count": len(split_words), "vowel_count": vowel}
+
+print(analyze_text("Python is fun"))
