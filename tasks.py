@@ -9,9 +9,9 @@ def get_user_info():
         "favorite_color": <user's favorite color>
     }
     """
-    name = input("Enter your name: ")
-    age = int(input("Enter your age: "))
-    favorite_color = input("Enter your favorite color: ")
+    name = input("Enter your name: ").capitalize()
+    age = input("Enter your age: ")
+    favorite_color = input("Enter your favorite color: ").capitalize()
     
     return {"name" : name,
             "age" : age,
